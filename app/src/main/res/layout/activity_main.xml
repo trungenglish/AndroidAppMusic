@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@drawable/ic_spotify"/>
+
+    <TextView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:gravity="center"
+        android:text="Millions of songs."
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:gravity="center"
+        android:text="Free on Spotify."
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        app:backgroundTint="@color/green"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Sign up free"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        app:backgroundTint="@null"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Continue with phone number"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        app:backgroundTint="@null"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Continue with Google"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        app:backgroundTint="@null"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Continue with Facebook"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        app:backgroundTint="@null"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Continue with Apple"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+
+</LinearLayout>
