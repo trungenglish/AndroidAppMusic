@@ -69,6 +69,7 @@
         android:textColor="@color/white"
         android:textStyle="bold"/>
     <Button
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button_background"
@@ -78,6 +79,7 @@
         android:textColor="@color/white"
         android:textStyle="bold"/>
     <TextView
+        android:id="@+id/txtLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_15sdp"
