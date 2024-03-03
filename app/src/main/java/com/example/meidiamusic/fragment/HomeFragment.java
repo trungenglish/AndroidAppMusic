@@ -2,7 +2,10 @@ package com.example.meidiamusic.fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NavigationRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -10,9 +13,11 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.meidiamusic.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,7 +25,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
-
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -52,7 +56,6 @@ public class HomeFragment extends Fragment {
         return fragment;
     }
 
-    BottomNavigationView bottomNav;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,15 +64,40 @@ public class HomeFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    ImageView mnUser;
+    DrawerLayout myDrawer;
+    NavigationView myNavigationView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        mnUser = view.findViewById(R.id.mnUser);
+        myDrawer = view.findViewById(R.id.myDrawer);
+        mnUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDrawer.open();
+            }
+        });
+        return view;
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        addVertical();
+        addHorizontal();
     }
 
+    private void addVertical() {
+        Fragment childFragment = new LikeListSongGridFragment();
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.replace(R.id.frameLayout2Columns,childFragment).commit();
+    }
 
-
-
+    void addHorizontal(){
+        Fragment childFragment = new ListMusicHorizontalFragment();
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.replace(R.id.frameLayoutHorizontal,childFragment).commit();
+    }
 }

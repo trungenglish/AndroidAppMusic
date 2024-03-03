@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+    <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_4sdp"
+            android:src="@drawable/icon_user"
+            android:id="@+id/imageViewItem2Columns"/>
+
+    <TextView
+            android:layout_width="@dimen/_112sdp"
+            android:layout_height="match_parent"
+            android:background="#232222"
+            android:gravity="center_vertical"
+            android:text="Wale the Sage"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/txtViewItem2Columns"/>
+</LinearLayout>
