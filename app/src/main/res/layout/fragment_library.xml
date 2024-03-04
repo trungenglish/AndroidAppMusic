@@ -6,11 +6,7 @@
     tools:context=".fragment.LibraryFragment"
     android:fitsSystemWindows="false"
     android:id="@+id/myDrawer1">
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:id="@+id/"/>
+    
     <!-- TODO: Update blank fragment layout -->
 
 </androidx.drawerlayout.widget.DrawerLayout>

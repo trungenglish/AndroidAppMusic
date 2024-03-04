@@ -3,12 +3,21 @@ package com.example.meidiamusic.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.meidiamusic.R;
+import com.example.meidiamusic.adapter.NhacAdapter;
+import com.example.meidiamusic.adapter.TuyenTapAdapter;
+import com.example.meidiamusic.model.Nhac;
+import com.example.meidiamusic.model.TuyenTap;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,12 +64,31 @@ public class ListMusicHorizontalFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        intSampleDate();
     }
+
+    private void intSampleDate() {
+        ttItem = new ArrayList<TuyenTap>();
+        ttItem.add(new TuyenTap(R.drawable.icon_user,"ThinhSuyNghi"));
+        ttItem.add(new TuyenTap(R.drawable.icon_user,"ThinhSuyNghi"));
+        ttItem.add(new TuyenTap(R.drawable.icon_user,"ThinhSuyNghi"));
+        ttItem.add(new TuyenTap(R.drawable.icon_user,"ThinhSuyNghi"));
+        ttItem.add(new TuyenTap(R.drawable.icon_user,"ThinhSuyNghi"));
+        ttItem.add(new TuyenTap(R.drawable.icon_user,"ThinhSuyNghi"));
+
+    }
+
+    ArrayList<TuyenTap> ttItem;
+    RecyclerView recyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list_music_horizontal, container, false);
+        View view = inflater.inflate(R.layout.fragment_list_music_horizontal,container,false);
+        recyclerView = view.findViewById(R.id.recyclerViewHorizontal);
+        TuyenTapAdapter tuyenTapAdapter = new TuyenTapAdapter(ttItem,getContext());
+        recyclerView.setAdapter(tuyenTapAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,false));
+        return view;
     }
 }

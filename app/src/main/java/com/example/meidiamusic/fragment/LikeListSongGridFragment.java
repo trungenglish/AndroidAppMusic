@@ -22,8 +22,7 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class LikeListSongGridFragment extends Fragment {
-    ArrayList<Nhac> nhacItems;
-    RecyclerView recyclerView;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -76,7 +75,8 @@ public class LikeListSongGridFragment extends Fragment {
         nhacItems.add(new Nhac(R.drawable.icon_user,"ThinhSuyNghi"));
         nhacItems.add(new Nhac(R.drawable.icon_user,"ThinhSuyNghi"));
     }
-
+    ArrayList<Nhac> nhacItems;
+    RecyclerView recyclerView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
