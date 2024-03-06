@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/mnLightning"
-        app:showAsAction="always"
-        android:icon="@drawable/icon_lightning"
-        android:title="News"/>
-    <item
-        android:id="@+id/mnClock"
-        app:showAsAction="always"
-        android:icon="@drawable/icon_clock"
-        android:title="Listened"/>
-    <item
-        android:id="@+id/mnSetting"
-        app:showAsAction="always"
-        android:icon="@drawable/icon_settings"
-        android:title="Settings"/>
+    <group
+        android:id="@+id/grp1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/mnLightning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/icon_lightning"
+            android:title="News"/>
+        <item
+            android:id="@+id/mnClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/icon_clock"
+            android:title="Listened"
+            />
+        <item
+            android:id="@+id/mnSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/icon_settings"
+            android:title="Settings"/>
+    </group>
 </menu>

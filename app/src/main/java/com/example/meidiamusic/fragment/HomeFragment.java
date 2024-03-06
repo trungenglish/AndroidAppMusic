@@ -1,5 +1,6 @@
 package com.example.meidiamusic.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NavigationRes;
@@ -14,7 +15,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
+import com.example.meidiamusic.MusicActivity;
 import com.example.meidiamusic.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -67,6 +70,7 @@ public class HomeFragment extends Fragment {
     ImageView mnUser;
     DrawerLayout myDrawer;
     NavigationView myNavigationView;
+    LinearLayout FromMusicLayout;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,6 +78,14 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         mnUser = view.findViewById(R.id.mnUser);
         myDrawer = view.findViewById(R.id.myDrawer);
+        FromMusicLayout = view.findViewById(R.id.FromMusicLayout);
+        FromMusicLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), MusicActivity.class);
+                startActivity(i);
+            }
+        });
         mnUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

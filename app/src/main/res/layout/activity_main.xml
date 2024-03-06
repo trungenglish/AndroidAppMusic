@@ -40,8 +40,10 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:text="Sign up free"
         android:textColor="@color/black"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:id="@+id/btnSignUp"/>
     <Button
+        android:id="@+id/btnSignUpPhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button_background"
