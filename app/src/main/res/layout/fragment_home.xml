@@ -15,7 +15,7 @@
         android:layout_gravity="start"
         app:menu="@menu/menu_drawer"
         app:headerLayout="@layout/header_drawer"
-        android:background="@color/grey" />
+        android:background="@color/black" />
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                     android:padding="@dimen/_5sdp"/>
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_100sdp"
+                    android:layout_height="@dimen/_150sdp"
                     android:id="@+id/frameLayoutHorizontal"/>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

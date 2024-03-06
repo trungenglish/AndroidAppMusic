@@ -169,6 +169,7 @@ public class MusicActivity extends AppCompatActivity {
     private void AddSong() {
         arraySong = new ArrayList<>();
         arraySong.add(new Song("Devil", R.raw.devil));
+        arraySong.add(new Song("Buồn hay vui", R.raw.buon_hay_vui));
         arraySong.add(new Song("The Force", R.raw.the_force));
         arraySong.add(new Song("SDP Interlude", R.raw.sdp));
     }

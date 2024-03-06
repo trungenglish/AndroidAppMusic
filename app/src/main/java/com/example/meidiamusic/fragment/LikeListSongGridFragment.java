@@ -66,14 +66,14 @@ public class LikeListSongGridFragment extends Fragment {
 
     void intSampleData() {
         nhacItems = new ArrayList<Nhac>();
-        nhacItems.add(new Nhac(R.drawable.icon_user,"ThinhSuyNghi"));
-        nhacItems.add(new Nhac(R.drawable.icon_user,"ThinhSuyNghi"));
-        nhacItems.add(new Nhac(R.drawable.icon_user,"ThinhSuyNghi"));
-        nhacItems.add(new Nhac(R.drawable.icon_user,"ThinhSuyNghi"));
-        nhacItems.add(new Nhac(R.drawable.icon_user,"ThinhSuyNghi"));
-        nhacItems.add(new Nhac(R.drawable.icon_user,"ThinhSuyNghi"));
-        nhacItems.add(new Nhac(R.drawable.icon_user,"ThinhSuyNghi"));
-        nhacItems.add(new Nhac(R.drawable.icon_user,"ThinhSuyNghi"));
+        nhacItems.add(new Nhac(R.drawable.walethesage,"Like songs"));
+        nhacItems.add(new Nhac(R.drawable.walethesage,"Wale the sage"));
+        nhacItems.add(new Nhac(R.drawable.walethesage,"Taylor Swift"));
+        nhacItems.add(new Nhac(R.drawable.walethesage,"ThinhSuyNghi"));
+        nhacItems.add(new Nhac(R.drawable.walethesage,"The Weeknd"));
+        nhacItems.add(new Nhac(R.drawable.walethesage,"11:11-Chris Brown"));
+        nhacItems.add(new Nhac(R.drawable.walethesage,"Charlie Puth"));
+        nhacItems.add(new Nhac(R.drawable.walethesage,"MCK"));
     }
     ArrayList<Nhac> nhacItems;
     RecyclerView recyclerView;
