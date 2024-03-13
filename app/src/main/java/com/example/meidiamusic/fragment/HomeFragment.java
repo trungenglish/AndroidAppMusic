@@ -1,5 +1,6 @@
 package com.example.meidiamusic.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -16,11 +17,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.meidiamusic.MusicActivity;
 import com.example.meidiamusic.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -66,17 +70,21 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
     ImageView mnUser;
     DrawerLayout myDrawer;
-    NavigationView myNavigationView;
     LinearLayout FromMusicLayout;
+    TextView txtNameHeader;
+    NavigationView headerNavigation;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         mnUser = view.findViewById(R.id.mnUser);
+        headerNavigation = view.findViewById(R.id.headerNavigation);
+        txtNameHeader = view.findViewById(R.id.txtNameHeader);
         myDrawer = view.findViewById(R.id.myDrawer);
         FromMusicLayout = view.findViewById(R.id.FromMusicLayout);
         FromMusicLayout.setOnClickListener(new View.OnClickListener() {
@@ -92,8 +100,15 @@ public class HomeFragment extends Fragment {
                 myDrawer.open();
             }
         });
+//        updateUI();
         return view;
     }
+//    void updateUI(){
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        if (user != null){
+//            txtNameHeader.setText(user.getDisplayName());
+//        }
+//    }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1078816659852",
+    "project_id": "mediamusic-25bb0",
+    "storage_bucket": "mediamusic-25bb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078816659852:android:caeb1a533c79672ced9ea9",
+        "android_client_info": {
+          "package_name": "com.example.meidiamusic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOBas7qiGdU374DhxouwhtChY6D8BzEzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

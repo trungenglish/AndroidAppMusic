@@ -26,7 +26,7 @@
             android:textSize="25sp"
             android:textStyle="bold"/>
         <TextView
-            android:id="@+id/edtEmail"
+            android:id="@+id/edtCountry"
             android:layout_width="370dp"
             android:layout_height="50dp"
             android:background="@drawable/edittext_background"

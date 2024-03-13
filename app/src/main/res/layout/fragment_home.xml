@@ -10,6 +10,7 @@
     android:fitsSystemWindows="true"
     android:id="@+id/myDrawer">
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/headerNavigation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
@@ -30,7 +31,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:id="@+id/menuHeader"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top">
 
@@ -65,7 +67,6 @@
                         android:backgroundTint="#232222"
                         android:text="Podcasts" />
                 </LinearLayout>
-
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_160sdp"
